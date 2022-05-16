@@ -2,7 +2,7 @@ const db = require('./db')
 
 function insertFrom(strat, to) {
     for (let i = strat; i <= to; i++) {
-        const fileName = `../resource/work${i}.json`
+        const fileName = `../src/work${i}.json`
         const work = require(fileName)
         console.log('正在添加....', i);
         inertMysql(work)
