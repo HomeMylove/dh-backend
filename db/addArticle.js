@@ -33,3 +33,6 @@ function inertMysql(data) {
         console.log('ok', data.length);
     })
 }
+// 注意，不能一次写入太多数据，否则会连接超时
+// 一次大约30
+insertFrom(1,1);

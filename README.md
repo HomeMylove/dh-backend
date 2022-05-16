@@ -2,7 +2,7 @@
 
 ## 前言
 
-本项目后台由nodejs搭建，在开始之前，请确定配置好了==node==环境，以及安装 ==npm==包管理工具
+本项目后台由nodejs搭建，在开始之前，请确定配置好了node环境，以及安装 npm包管理工具
 
 ## 安装依赖
 
@@ -16,13 +16,13 @@ npm install
 
 ## 准备
 
-在启动服务器之前，请配置好==数据库==
+在启动服务器之前，请配置好数据库
 
 本项目使用了MySQL数据库
 
 在命令行依次执行以下命令
 
-==创建数据库==
+创建数据库
 
 ```sql
 CREATE DATABASE IF NOT EXISTS dh;
@@ -31,7 +31,7 @@ USE dh;
 
 推荐使用 dh 作为数据库名
 
-==创建 article数据表==
+创建 article数据表
 
 ```sql
 CREATE TABLE `dh`.`article` (
@@ -53,7 +53,7 @@ text: 正文
 
 time: 上传时间，在用户上传时有用
 
-==创建 author数据表==
+创建 author数据表
 
 ```sql
 CREATE TABLE `dh`.`author` (
@@ -75,7 +75,7 @@ roman_name:作者罗马音
 
 about:作者简介
 
-==创建 comments数据表==
+创建 comments数据表
 
 ```sql
 CREATE TABLE `dh`.`comments` (
@@ -97,7 +97,7 @@ comment:评论内容
 
 time: 评论时间
 
-==创建 discussion 数据表==
+创建 discussion 数据表
 
 ```sql
 CREATE TABLE `dh`.`discussion` (
@@ -130,7 +130,7 @@ gender：性别，用于确定头像
 cd db
 ```
 
-在 ==db.js==中配置数据库
+在 db.js中配置数据库
 
 ```javascript
 const database = {
@@ -141,15 +141,15 @@ const database = {
 }
 ```
 
-需要修改==password==属性的值为数据库的密码，如果数据库命名==不为dh==，还需要修改==datatabase==的值
+需要修改password属性的值为数据库的密码，如果数据库命不为dh，还需要修改datatabase的值
 
-运行文件夹下的 ==addAuthor.js==文件，将about_author.json中的数据写入数据库
+运行文件夹下的 addAuthor.js文件，将about_author.json中的数据写入数据库
 
 ```shell
 node addAuthor.js
 ```
 
-运行文件夹下的==addArticle.js==文件，将resource文件夹中的数据写入数据库
+运行文件夹下的addArticle.js文件，将src文件夹中的数据写入数据库
 
 ```shell
 node addArticle.js
